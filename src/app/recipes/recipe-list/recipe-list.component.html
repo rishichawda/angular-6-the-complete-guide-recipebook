@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="list-group">
-        <app-recipe-item  *ngFor="let recipe of recipes" [recipe_item]="recipe"></app-recipe-item>
+        <app-recipe-item *ngFor="let recipe of recipes" [recipe_item]="recipe" (on_recipe_select)="change_selected_recipe(recipe)"></app-recipe-item>
       </div>
     </div>
   </div>
