@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  show_recipesection: boolean = true;
+
+  show_recipe_section(event){
+    this.show_recipesection = event.show_recipesection;
+    
+  }
+  
+  show_shoplist_section(event){
+    this.show_recipesection = event.show_recipesection;
+  }
+
 }
