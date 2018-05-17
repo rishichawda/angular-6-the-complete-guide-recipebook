@@ -7,15 +7,12 @@ import { Component, Output, EventEmitter } from "@angular/core";
 
 export class HeaderComponent {
 
-    @Output('on_recipebtn_click') recipebuttonclick = new EventEmitter<{show_recipesection: boolean}>();
-    @Output('on_shoplist_click') shopbuttonclick = new EventEmitter<{show_recipesection: boolean}>();
+    @Output('on_section_select') selection = new EventEmitter<string>();
+    active_tab: string = 'recipe-book';
 
-    onclick_recipebutton(){
-        this.recipebuttonclick.emit({show_recipesection: true});
-    }
-    
-    onclick_shopbutton(){
-        this.shopbuttonclick.emit({show_recipesection: false});
+    on_select_section(section_name: string) {
+        this.active_tab = section_name;
+        this.selection.emit(this.active_tab);
     }
 
 }

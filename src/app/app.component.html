@@ -1,12 +1,11 @@
  <app-header 
- (on_recipebtn_click) = "show_recipe_section($event)" 
- (on_shoplist_click) = "show_shoplist_section($event)"
+ (on_section_select) = "change_section($event)" 
   ></app-header>
  <div class="container mt-3">
    <div class="row">
      <div class="col-sm-12">
-       <app-recipes *ngIf="show_recipesection"></app-recipes>
-       <app-shopping-list *ngIf="!show_recipesection"></app-shopping-list>
+       <app-recipes *ngIf="show_section==='recipe-book'"></app-recipes>
+       <app-shopping-list *ngIf="show_section==='shopping-list'"></app-shopping-list>
      </div>
    </div>
  </div>

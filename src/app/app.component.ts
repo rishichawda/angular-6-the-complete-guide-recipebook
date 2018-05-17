@@ -6,15 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  show_recipesection: boolean = true;
+  show_section: string = 'recipe-book';
 
-  show_recipe_section(event){
-    this.show_recipesection = event.show_recipesection;
-    
-  }
-  
-  show_shoplist_section(event){
-    this.show_recipesection = event.show_recipesection;
+  change_section(section_name) {
+    this.show_section = section_name;
   }
 
 }
