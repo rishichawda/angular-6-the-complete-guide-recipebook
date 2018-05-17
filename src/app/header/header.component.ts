@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from "@angular/core";
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector : 'app-header',
@@ -8,7 +8,7 @@ import { Component, Output, EventEmitter } from "@angular/core";
 export class HeaderComponent {
 
     @Output('on_section_select') selection = new EventEmitter<string>();
-    active_tab: string = 'recipe-book';
+    active_tab = 'recipe-book';
 
     on_select_section(section_name: string) {
         this.active_tab = section_name;
