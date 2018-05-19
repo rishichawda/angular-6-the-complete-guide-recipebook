@@ -10,7 +10,7 @@ export class ShoppingEditComponent implements OnInit {
 
   @ViewChild('iname_input') ingredient_name: ElementRef;
   @ViewChild('iquantity_input') ingredient_quantity: ElementRef;
-  
+
   @Output('on_add_newingredient') on_add_ingredient = new EventEmitter<Ingredient>();
 
   constructor() { }
@@ -18,16 +18,16 @@ export class ShoppingEditComponent implements OnInit {
   ngOnInit() {
   }
 
-  add_ingredients(){
+  add_ingredients() {
     const new_iname = this.ingredient_name.nativeElement.value;
     const new_item_quantity = this.ingredient_quantity.nativeElement.value;
-    const new_ingredient = new Ingredient(new_iname,new_item_quantity);
+    const new_ingredient = new Ingredient(new_iname, new_item_quantity);
     this.on_add_ingredient.emit(new_ingredient);
   }
 
-  clear_input(){
-    this.ingredient_name.nativeElement.value = "";
-    this.ingredient_quantity.nativeElement.value = "";
+  clear_input() {
+    this.ingredient_name.nativeElement.value = '';
+    this.ingredient_quantity.nativeElement.value = '';
   }
 
 }
