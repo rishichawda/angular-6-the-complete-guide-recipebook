@@ -10,20 +10,17 @@ import { ShoppingListService } from './shopping-list.service';
 })
 export class ShoppingListComponent implements OnInit {
 
-  // ingredients: Ingredient[] = [
-  //   new Ingredient('Apple', 5),
-  //   new Ingredient('Tomato', 10)
-  // ];
-
   ingredients: Ingredient[];
 
   constructor(private shoppinglist_service: ShoppingListService) { }
 
   ngOnInit() {
     this.ingredients = this.shoppinglist_service.get_ingredients();
-  }
-
-  add_to_list(new_item){
-    this.ingredients.push(new_item);
+    this.shoppinglist_service.new_ingredient_added
+    .subscribe(
+      () => {
+        this.ingredients = this.shoppinglist_service.get_ingredients();
+        }
+      );
   }
 }
