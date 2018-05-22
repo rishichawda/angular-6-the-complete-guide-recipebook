@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-5">
-      <app-recipe-list (show_recipe) = "show_selected_recipe($event)" ></app-recipe-list>
+      <app-recipe-list ></app-recipe-list>
     </div>
     <div class="col-sm-7">
       <app-recipe-detail *ngIf="current_recipe; else norecipe" [recipe_detail]="current_recipe"></app-recipe-detail>
