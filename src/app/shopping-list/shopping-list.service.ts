@@ -13,10 +13,7 @@ export class ShoppingListService {
         return this.ingredients.slice();
     }
 
-    add_ingredients(ingredient_name, ingredient_quantity) {
-        const new_iname = ingredient_name;
-        const new_item_quantity = ingredient_quantity;
-        const new_ingredient = new Ingredient(new_iname, new_item_quantity);
+    add_ingredients(new_ingredient: Ingredient) {
         this.ingredients.push(new_ingredient);
     }
 
