@@ -14,7 +14,7 @@ import { RecipeService } from '../../recipe.service';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-  
+
   // @Output('on_recipe_select') recipe_select = new EventEmitter<void>();
   @Input() recipe_item: Recipe;
 
@@ -23,7 +23,7 @@ export class RecipeItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  show_recipe_item(){
+  show_recipe_item() {
     // this.recipe_select.emit();
     this.recipe_service.recipe_selected.emit(this.recipe_item);
   }

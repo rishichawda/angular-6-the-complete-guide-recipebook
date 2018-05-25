@@ -1,5 +1,5 @@
-import { Ingredient } from "../shared/ingredient.model";
-import { EventEmitter } from "@angular/core";
+import { Ingredient } from '../shared/ingredient.model';
+import { EventEmitter } from '@angular/core';
 
 export class ShoppingListService {
     private ingredients: Ingredient[] = [
@@ -16,5 +16,4 @@ export class ShoppingListService {
     add_ingredients(new_ingredient: Ingredient) {
         this.ingredients.push(new_ingredient);
     }
-
 }
