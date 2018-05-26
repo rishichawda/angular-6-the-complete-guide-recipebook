@@ -12,6 +12,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { HoverIndicatorDirective } from './shopping-list/hover-indicator.directive.ts.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     ShoppingListComponent,
     ShoppingEditComponent,
     RecipeItemComponent,
-    HoverIndicatorDirective
+    HoverIndicatorDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
