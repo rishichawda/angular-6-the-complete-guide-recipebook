@@ -25,6 +25,6 @@ export class RecipeItemComponent implements OnInit {
 
   show_recipe_item() {
     // this.recipe_select.emit();
-    this.recipe_service.recipe_selected.emit(this.recipe_item);
+    this.recipe_service.change_current_recipe(this.recipe_item);
   }
 }

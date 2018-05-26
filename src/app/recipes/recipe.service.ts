@@ -3,6 +3,7 @@ import { EventEmitter } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 
 export class RecipeService {
+    private current_recipe: Recipe;
     private recipes: Recipe[] = [
         new Recipe(
             'Sample Recipe',
@@ -28,5 +29,14 @@ export class RecipeService {
     get_recipes() {
         // sclice method call ensures we pass a copy of the reference of original recipe array and not the actual reference so that it cannot be accessed from outside.
         return this.recipes.slice();
+    }
+
+    get_current_recipe() {
+        return this.current_recipe;
+    }
+
+    change_current_recipe(recipe: Recipe) {
+        this.current_recipe = recipe;
+        this.recipe_selected.emit(recipe);
     }
 }
