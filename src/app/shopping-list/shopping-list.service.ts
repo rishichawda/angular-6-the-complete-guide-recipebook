@@ -18,7 +18,7 @@ export class ShoppingListService {
         this.new_ingredient_added.emit();
     }
 
-    add_ingredients_list(list:Ingredient[]) {
+    add_ingredients_list(list: Ingredient[]) {
         this.ingredients.push(...list);
     }
 }

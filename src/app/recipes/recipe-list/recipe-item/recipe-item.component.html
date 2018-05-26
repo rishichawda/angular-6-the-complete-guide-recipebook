@@ -1,7 +1,7 @@
-<a class="list-group-item list-group-item-action flex-column align-items-start" (click) = "show_recipe_item()">
-  <div class="d-flex w-100 justify-content-between">
+<a class="list-group-item list-group-item-action flex-column align-items-start mb-2" (click) = "show_recipe_item()">
+  <div class="d-flex w-100 justify-content-between p-2">
     <h5 class="mb-1">{{ recipe_item.name }}</h5>
   </div>
   <img [src]="recipe_item.image" alt="recipe_item.name" style="min-height:50px" class="img-fluid">
-  <p class="mb-1"> {{ recipe_item.description }} </p>
+  <p class="mb-1 mt-2"> {{ recipe_item.description }} </p>
 </a>
