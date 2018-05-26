@@ -15,5 +15,6 @@ export class ShoppingListService {
 
     add_ingredients(new_ingredient: Ingredient) {
         this.ingredients.push(new_ingredient);
+        this.new_ingredient_added.emit();
     }
 }
