@@ -22,4 +22,3 @@ export class ShoppingListService {
         this.ingredients.push(...list);
     }
 }
-`
