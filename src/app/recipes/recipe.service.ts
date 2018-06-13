@@ -31,6 +31,10 @@ export class RecipeService {
         return this.recipes.slice();
     }
 
+    get_recipe(id: number) {
+        return this.recipes[id - 1];
+    }
+
     get_current_recipe() {
         return this.current_recipe;
     }
