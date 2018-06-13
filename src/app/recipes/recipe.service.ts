@@ -32,7 +32,7 @@ export class RecipeService {
     }
 
     get_recipe(id: number) {
-        return this.recipes[id - 1];
+        return this.recipes[id];
     }
 
     get_current_recipe() {
